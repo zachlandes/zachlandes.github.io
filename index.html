@@ -1,530 +1,646 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Cubby - Self-Storage On Demand</title>
-    <link rel="icon" href="assets/icons/favicon.png" type="image/png" sizes="16x16">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Cubby - Storage On-Demand">
-    <meta name="keywords" content="Self Storage, On-Demand Storage, Full Service Self Storage, On-Demand Storage">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/animate.css"> <!-- Resource style -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.css">
-    <link rel="stylesheet" href="assets/css/ionicons.min.css"> <!-- Resource style -->
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- Navbar Section -->
-      <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-        <div class="container container-s">
-          <a class="navbar-brand" href="#">cubby</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto navbar-right">
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#products">Products</a></li>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#features">Features</a></li>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#reviews">Reviews</a></li>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#pricing">Pricing</a></li>
-              <li class="nav-item"><a class="btn-cta nav-link js-scroll-trigger" href="#signup">Sign Up</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav><!-- Navbar End -->
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="zachlandes.com">
+<meta name="author" content="Zach Landes">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Portu | Home</title>
+
+<!-- STYLES -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800&display=swap" rel="stylesheet">
 
 
-      <div id="main" class="main">
-        <div class="home"><!-- Hero Section-->
-          <div class="container">
-            <div class="row text-center">
-              <div class="col-md-12">
-                <div class="hero-img wow fadeIn">
-                  <img class="img-fluid" src="assets/images/living-room2.jpg" alt="Home">
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="hero-content wow fadeIn">
-                  <h1>Store anything, right now</h1>
-                  <p>Your stuff, picked up and stored in an hour. For less than the cost of self-storage.</p>
-                  <div class="container">
-                    <div class="panel panel-primary">
-                      <div class="panel-heading">
-                        <h2 class="panel-title">Add your Address</h2>
-                      </div>
-                      <div class="panel-body">
-                        <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" class="form-control">
-                        <div id="address">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <label class="control-label">Street address</label>
-                              <input class="form-control" id="street_number" disabled="true">
-                            </div>
-                            <div class="col-md-6">
-                              <label class="control-label">Route</label>
-                              <input class="form-control" id="route" disabled="true">
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-6">
-                              <label class="control-label">City</label>
-                              <input class="form-control field" id="locality" disabled="true">
-                            </div>
-                            <div class="col-md-6"> 
-                              <label class="control-label">State</label>
-                              <input class="form-control" id="administrative_area_level_1" disabled="true">
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-6">
-                              <label class="control-label">Zip code</label>
-                              <input class="form-control" id="postal_code" disabled="true">
-                            </div>
-                            <div class="col-md-6">
-                              <label class="control-label">Country</label>
-                              <input class="form-control" id="country" disabled="true">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+<link rel="stylesheet" type="text/css" href="css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+<!-- /STYLES -->
 
-                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTX_GXyuOtxEj_zITIPLxQ4tJwtgDx7lQ&libraries=places&callback=initAutocomplete" async defer></script>
-                  <a class="btn-action js-scroll-trigger" href="#signup">Register now</a>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="client-list wow fadeIn">
-                  <ul>
-                    <li><img class="img-fluid" src="assets/icons/1.png" alt="Client"> </li>
-                    <li><img class="img-fluid" src="assets/icons/2.png" alt="Client"> </li>
-                    <li><img class="img-fluid" src="assets/icons/3.png" alt="Client"> </li>
-                    <li><img class="img-fluid" src="assets/icons/4.png" alt="Client"> </li>
-                    <li><img class="img-fluid" src="assets/icons/5.png" alt="Client"> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- Hero End -->
+</head>
 
+<body>
+	
+	<!-- PRELOADER -->
+	<div class="portu_tm_loader-wrapper">
+    	<div class="loader"></div>
+	</div>
+	<!-- /PRELOADER -->
+	
+<!-- WRAPPER ALL -->
+<div class="portu_tm_all_wrap">
+	<div class="wrapper_inner">
+		
+		<!-- MOBILE MENU -->
+		<div class="portu_tm_mobile_menu">
+			<div class="mobile_inner">
+				<div class="container">
+					<div class="menu_in">
+						<div class="hero_texts">
+							<span class="name" style=" color: #ff8f03;">Zach Landes</span>
+						</div>
+						<div class="trigger">
+							<a href="#">
+								<span class="menu">Menu</span>
+								<span class="close">Close</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dropdown">
+				<div class="container">
+					<div class="dropdown_inner">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#news">News</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /MOBILE MENU -->
+		
+		<div class="portu_tm_topbar">
+			<div class="container">
+				<div class="topbar_inner">
+					<div class="hero_texts">
+							<span class="name" style=" color: #ff8f03;">Zach Landes</span>
+					</div>
+					<div class="menu">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#news">News</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- HERO -->
+		<div class="portu_tm_section" id="home">
+			<div class="portu_tm_hero">
+				<div class="container">
+					<div class="hero_texts">
+						<span class="name">Zach Landes</span>
+						<h3>I'm <span class="portu_tm_animation_text_word"></span></h3>
+						<ul>
+							<li>
+								<div class="inner">
+									<img class="svg" src="img/svg/location-1.svg" alt="" />
+									<span><a href="#">San Francisco</a></span>
+								</div>
+							</li>
+							<li>
+								<div class="inner">
+									<img class="svg" src="img/svg/message-2.svg" alt="" />
+									<span><a href="#">zach@zachlandes.com</a></span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="animate_image">
+						<div class="about_wrap">
+							<div class="image_holder parallax" data-relative-input="true">
+								<img src="img/about/500x500.jpg" alt="" >
+								<div class="main_image layer" data-depth="0.06"></div>
+								<div class="image_border layer" data-depth="0.12">
+									<img src="img/about/500x500.jpg" alt="" />
+									<div class="border"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portu_tm_down">
+						<div class="line_wrapper">
+							<div class="line"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /HERO -->
+		
+		<!-- ABOUT -->
+		<div class="portu_tm_section" id="about">
+			<div class="portu_tm_about">
+				<div class="container">
+					<div class="about_inner">
+						<div class="left wow fadeInLeft" data-wow-duration="1.2s">
+							<div class="image">
+								<img src="img/about/550x650.jpg" alt="" />
+								<div class="main" data-img-url="img/about/2.jpg"></div>
+							</div>
+						</div>
+						<div class="right wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.2s">
+							<div class="about_title">
+								<h3>I like to <span>create</span> exclusive web templates.</h3>
+							</div>
+							<div class="text">
+								<p>I love to work in User Experience &amp; User Interface designing. Because I love to solve the design problem and find easy and better solutions to solve it. I always try my best to make good user interface with the best user experience. I have been working as a Visual designer.</p>
+							</div>
+							<div class="sign">
+								<img src="img/sign/sign.png" alt="" />
+							</div>
+							<div class="sign_name">
+								<span>Alan Michaelis</span>
+							</div>
+							<div class="portu_tm_button">
+								<a href="#">Download CV</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ABOUT -->
+		
+		<!-- SERVICE -->
+		<div class="portu_tm_section">
+			<div class="portu_tm_service">
+				<div class="container">
+					<div class="service_inner">
+						<ul class="owl-carousel">
+							<li class="item">
+								<div class="inner">
+									<div class="title">
+										<img class="svg" src="img/svg/source.svg" alt="" />
+										<h3>Web Development</h3>
+									</div>
+									<div class="details">
+										<p>Web development broadly refers to the tasks associated with developing...</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<div class="title">
+										<img class="svg" src="img/svg/line-chart.svg" alt="" />
+										<h3>Brand Identity</h3>
+									</div>
+									<div class="details">
+										<p>A brand identity is a set of tools or elements used by a company to...</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<div class="title">
+										<img class="svg" src="img/svg/light-bulb.svg" alt="" />
+										<h3>Creative Design</h3>
+									</div>
+									<div class="details">
+										<p>Creative design includes designs that are unique, effective and memorable...</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<div class="title">
+										<img class="svg" src="img/svg/adobe-photoshop.svg" alt="" />
+										<h3>Adobe Photoshop</h3>
+									</div>
+									<div class="details">
+										<p>Adobe Photoshop is a raster graphics editor and published by Adobe inc...</p>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<div class="title">
+										<img class="svg" src="img/svg/twitter-1.svg" alt="" />
+										<h3>Social Media</h3>
+									</div>
+									<div class="details">
+										<p>Social media marketing is the use of social media platforms to connect...</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /SERVICE -->
+		
+		<!-- PORTFOLIO -->
+		<div class="portu_tm_section" id="portfolio">
+			<div class="portu_tm_portfolio">
+				<div class="container">
+					<div class="portu_tm_title_holder">
+						<span>Portfolio</span>
+						<h3>Creative Works</h3>
+					</div>
+					<div class="portfolio_list">
+						<ul>
+							<li>
+								<div class="inner wow fadeInLeft" data-wow-duration="1.2s">
+									<div class="image">
+										<img src="img/portfolio/600x600.jpg" alt="" />
+										<div class="main" data-img-url="img/portfolio/1.jpg"></div>
+									</div>
+									<div class="overlay"></div>
+									<div class="overlay_text">
+										<span class="title">Mockup tools</span>
+										<span class="category">Branding</span>
+									</div>
+									<a class="link" href="portfolio-single.html"></a>
+								</div>
+							</li>
+							<li>
+								<div class="inner wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.2s">
+									<div class="image">
+										<img src="img/portfolio/600x600.jpg" alt="" />
+										<div class="main" data-img-url="img/portfolio/2.jpg"></div>
+									</div>
+									<div class="overlay"></div>
+									<div class="overlay_text">
+										<span class="title">Mockup Box</span>
+										<span class="category">Photography</span>
+									</div>
+									<a class="link" href="portfolio-single-2.html"></a>
+								</div>
+							</li>
+							<li>
+								<div class="inner wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.4s">
+									<div class="image">
+										<img src="img/portfolio/600x600.jpg" alt="" />
+										<div class="main" data-img-url="img/portfolio/3.jpg"></div>
+									</div>
+									<div class="overlay"></div>
+									<div class="overlay_text">
+										<span class="title">Black Bag</span>
+										<span class="category">Design</span>
+									</div>
+									<a class="link" href="portfolio-single-3.html"></a>
+								</div>
+							</li>
+							<li>
+								<div class="inner wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.6s">
+									<div class="image">
+										<img src="img/portfolio/600x600.jpg" alt="" />
+										<div class="main" data-img-url="img/portfolio/4.jpg"></div>
+									</div>
+									<div class="overlay"></div>
+									<div class="overlay_text">
+										<span class="title">Small Paper</span>
+										<span class="category">Branding</span>
+									</div>
+									<a class="link" href="portfolio-single-4.html"></a>
+								</div>
+							</li>
+							<li>
+								<div class="inner wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.8s">
+									<div class="image">
+										<img src="img/portfolio/600x600.jpg" alt="" />
+										<div class="main" data-img-url="img/portfolio/5.jpg"></div>
+									</div>
+									<div class="overlay"></div>
+									<div class="overlay_text">
+										<span class="title">Yellow Cup</span>
+										<span class="category">Photography</span>
+									</div>
+									<a class="link" href="portfolio-single-5.html"></a>
+								</div>
+							</li>
+							<li>
+								<div class="inner wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="1s">
+									<div class="image">
+										<img src="img/portfolio/600x600.jpg" alt="" />
+										<div class="main" data-img-url="img/portfolio/6.jpg"></div>
+									</div>
+									<div class="overlay"></div>
+									<div class="overlay_text">
+										<span class="title">Mix Mockup</span>
+										<span class="category">Design</span>
+									</div>
+									<a class="link" href="portfolio-single-6.html"></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /PORTFOLIO -->
+		
+		<!-- TESTIMONIALS -->
+		<div class="portu_tm_section">
+			<div class="portu_tm_testimonials">
+				<div class="bg_wrap">
+					<div class="image jarallax" data-img-url="img/slider/1.jpg"></div>
+					<div class="overlay"></div>
+				</div>
+				<div class="content">
+					<ul class="owl-carousel">
+						<li class="item">
+							<div class="inner">
+								<div class="icon">
+									<i class="xcon-quote-left"></i>
+								</div>
+								<div class="text">
+									<p>" Portu team are easy to work with and helped me make amazing websites in a short amount of time. Thanks guys for all your hard works. "</p>
+								</div>
+								<div class="name_holder">
+									<span class="name">Markus Hudson</span>
+									<span class="job">Photographer</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="inner">
+								<div class="icon">
+									<i class="xcon-quote-left"></i>
+								</div>
+								<div class="text">
+									<p>" We were looking for a logo with a touch of modernism. Portu grasped our needs and produced a stunning design. "</p>
+								</div>
+								<div class="name_holder">
+									<span class="name">Albert Winston</span>
+									<span class="job">Co. Founder</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="inner">
+								<div class="icon">
+									<i class="xcon-quote-left"></i>
+								</div>
+								<div class="text">
+									<p>" Awesome to work with Portu. Incredibly organized, easy to communicate with, responsive with next iterations. "</p>
+								</div>
+								<div class="name_holder">
+									<span class="name">Albert Bruno</span>
+									<span class="job">Art of Designer</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- /TESTIMONIALS -->
+		
+		<!-- TEAM -->
+		<div class="portu_tm_section">
+			<div class="portu_tm_team">
+				<div class="container">
+					<div class="portu_tm_title_holder">
+						<span>Team</span>
+						<h3>Team Members</h3>
+					</div>
+					<div class="team_inner">
+						<ul>
+							<li class="wow fadeInLeft" data-wow-duration="1.2s">
+								<div class="inner">
+									<div class="image">
+										<img src="img/team/1.jpg" alt="" />
+										<div class="main" data-img-url="img/about/3.jpg"></div>
+										<div class="social">
+											<ul>
+												<li><a href="#"><i class="xcon-facebook"></i></a></li>	
+												<li><a href="#"><i class="xcon-twitter"></i></a></li>	
+												<li><a href="#"><i class="xcon-linkedin"></i></a></li>	
+												<li><a href="#"><i class="xcon-instagram"></i></a></li>	
+												<li><a href="#"><i class="xcon-behance"></i></a></li>	
+											</ul>
+										</div>
+									</div>
+									<div class="details">
+										<h3>Markus Brooklyn</h3>
+										<span>Web Developer</span>
+									</div>
+								</div>
+							</li>
+							<li class="wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.2s">
+								<div class="inner">
+									<div class="image">
+										<img src="img/team/1.jpg" alt="" />
+										<div class="main" data-img-url="img/about/4.jpg"></div>
+										<div class="social">
+											<ul>
+												<li><a href="#"><i class="xcon-facebook"></i></a></li>	
+												<li><a href="#"><i class="xcon-twitter"></i></a></li>	
+												<li><a href="#"><i class="xcon-linkedin"></i></a></li>	
+												<li><a href="#"><i class="xcon-instagram"></i></a></li>	
+												<li><a href="#"><i class="xcon-behance"></i></a></li>	
+											</ul>
+										</div>
+									</div>
+									<div class="details">
+										<h3>Monica Rodriguez</h3>
+										<span>Designer</span>
+									</div>
+								</div>
+							</li>
+							<li class="wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.4s">
+								<div class="inner">
+									<div class="image">
+										<img src="img/team/1.jpg" alt="" />
+										<div class="main" data-img-url="img/about/5.jpg"></div>
+										<div class="social">
+											<ul>
+												<li><a href="#"><i class="xcon-facebook"></i></a></li>	
+												<li><a href="#"><i class="xcon-twitter"></i></a></li>	
+												<li><a href="#"><i class="xcon-linkedin"></i></a></li>	
+												<li><a href="#"><i class="xcon-instagram"></i></a></li>	
+												<li><a href="#"><i class="xcon-behance"></i></a></li>	
+											</ul>
+										</div>
+									</div>
+									<div class="details">
+										<h3>Steve Tylor</h3>
+										<span>Manager</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /TEAM -->
+		
+		<!-- NEWS -->
+		<div class="portu_tm_section" id="news">
+			<div class="portu_tm_news">
+				<div class="container">
+					<div class="portu_tm_title_holder">
+						<span>News</span>
+						<h3>Latest News</h3>
+					</div>
+					<div class="news_inner">
+						<ul>
+							<li>
+								<div class="inner wow fadeInLeft" data-wow-duration="1.2s">
+									<div class="image">
+										<img src="img/news/300x200.jpg" alt="" />
+										<div class="main" data-img-url="img/news/3.jpg"></div>
+										<a class="link" href="news-single.html"></a>
+									</div>
+									<div class="details">
+										<div class="dates">
+											<p><span class="first">By <a href="#">Alan Walker</a></span><span class="second">03 July 2019</span></p>
+										</div>
+										<div class="title">
+											<h3><a href="news-single.html">The Role of Design in Development</a></h3>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="inner wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.2s">
+									<div class="image">
+										<img src="img/news/300x200.jpg" alt="" />
+										<div class="main" data-img-url="img/news/2.jpg"></div>
+										<a class="link" href="news-single-2.html"></a>
+									</div>
+									<div class="details">
+										<div class="dates">
+											<p><span class="first">By <a href="#">Bob Tylor</a></span><span class="second">02 July 2019</span></p>
+										</div>
+										<div class="title">
+											<h3><a href="news-single-2.html">The Power of Social Media in Life</a></h3>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="inner wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.4s">
+									<div class="image">
+										<img src="img/news/300x200.jpg" alt="" />
+										<div class="main" data-img-url="img/news/1.jpg"></div>
+										<a class="link" href="news-single-3.html"></a>
+									</div>
+									<div class="details">
+										<div class="dates">
+											<p><span class="first">By <a href="#">Kerge Brixton</a></span><span class="second">01 July 2019</span></p>
+										</div>
+										<div class="title">
+											<h3><a href="news-single-3.html">What is Web and App Development?</a></h3>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /NEWS -->
+		
+		<!-- CONTACT -->
+		<div class="portu_tm_section" id="contact">
+			<div class="portu_tm_contact">
+				<div class="container">
+					<div class="portu_tm_title_holder">
+						<span>Contact</span>
+						<h3>Get in Touch</h3>
+					</div>
+					<div class="contact_inner">
+						<div class="left wow fadeInLeft" data-wow-duration="1.2s">
+							<div class="about_short_contact_wrap">
+								<ul>
+									<li>
+										<img class="svg" src="img/svg/location-1.svg" alt="" />
+										<span><label>Location:</label><a class="href_location" href="#">11 Ave, New York, USA</a></span>
+									</li>
+									<li>
+										<img class="svg" src="img/svg/call-3.svg" alt="" />
+										<span><label>Phone:</label> <a href="tel:+77 022 177 05 05">+77 022 177 05 05</a></span>
+									</li>
+									<li>
+										<img class="svg" src="img/svg/browser-7.svg" alt="" />
+										<span><label>Website:</label> <a href="https://mydomain.com" target="_blank">myaddress.com</a></span>
+									</li>
+									<li>
+										<img class="svg" src="img/svg/twitter-1.svg" alt="" />
+										<span><label>Twitter:</label> <a href="https://twitter.com" target="_blank">@mytwitternick</a></span>
+									</li>
+									<li>
+										<img class="svg" src="img/svg/facebook-1.svg" alt="" />
+										<span><label>Facebook:</label> <a href="https://fb.me/@facebooknick" target="_blank">@myfacebooknick</a></span>
+									</li>
+									<li>
+										<img class="svg" src="img/svg/instagram-4.svg" alt="" />
+										<span><label>Instagram:</label> <a href="https://www.instagram.com" target="_blank">@myinstagramnick</a></span>
+									</li>
+									<li>
+										<img class="svg" src="img/svg/whatsapp-1.svg" alt="" />
+										<span><label>WhatsApp:</label> <a href="https://wa.me/@whatsappNickName" target="_blank">@mywhatsappnick</a></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="right wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.2s">
+							<form action="/" method="post" class="contact_form" id="contact_form">
+								<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+								<div class="empty_notice"><span>Please Fill Required Fields</span></div>
+								<div class="input_wrap">
+									<ul>
+										<li><input id="name" type="text" placeholder="Name" /></li>
+										<li><input id="email" type="text" placeholder="Mail" /></li>
+										<li><textarea id="message" placeholder="Message"></textarea></li>
+									</ul>
+									<div class="portu_tm_button" data-color="pink">
+										<a id="send_message" href="#"><span>Submit</span>	</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /CONTACT -->
+		
+		<!-- FOOTER -->
+		<div class="portu_tm_section">
+			<div class="portu_tm_footer">
+				<div class="container">
+					<div class="inner">
+						<div class="left wow fadeInLeft" data-wow-duration="1.2s">
+							<p>Copyright &copy; 2019. All Rights are Reserved</p>
+						</div>
+						<div class="right wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.2s">
+							<ul>
+								<li><a href="#"><i class="xcon-facebook"></i></a></li>
+								<li><a href="#"><i class="xcon-twitter"></i></a></li>
+								<li><a href="#"><i class="xcon-linkedin"></i></a></li>
+								<li><a href="#"><i class="xcon-instagram"></i></a></li>
+								<li><a href="#"><i class="xcon-behance"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /FOOTER -->		
+				
+	</div>
+</div>
+<!-- / WRAPPER ALL -->
+	
+<!-- SCRIPTS -->
+<script src="js/jquery.js"></script>
+<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
+<script src="js/plugins.js"></script>
+<script src="js/init.js"></script>
+<!-- /SCRIPTS -->
 
-        <div id="products" class="features wow fadeInDown">
-          <div class="container-m">
-            <div class="row text-center">
-              <div class="col-md-12">
-                <div class="features-intro">
-                  <h2>Welcome to cubby, where data matters.</h2>
-                  <p>We’ll Deliver the best stories and ideas on the topics you care about most straight to your
-                  homepage, app, or inbox. </p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="feature-list">
-                  <div class="card-icon">
-                    <div class="card-img">
-                      <img src="assets/icons/a1.png" width="35" alt="Feature">
-                    </div>
-                  </div>
-                  <div class="card-text">
-                    <h3>Responsive</h3>
-                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="feature-list">
-                  <div class="card-icon">
-                    <div class="card-img">
-                      <img src="assets/icons/a2.png" width="35" alt="Feature">
-                    </div>
-                  </div>
-                  <div class="card-text">
-                    <h3>Responsive</h3>
-                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="feature-list">
-                  <div class="card-icon">
-                    <div class="card-img">
-                      <img src="assets/icons/a3.png" width="35" alt="Feature">
-                    </div>
-                  </div>
-                  <div class="card-text">
-                    <h3>Responsive</h3>
-                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="feature-list">
-                  <div class="card-icon">
-                    <div class="card-img">
-                      <img src="assets/icons/a4.png" width="35" alt="Feature">
-                    </div>
-                  </div>
-                  <div class="card-text">
-                    <h3>User Friendly</h3>
-                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="feature-list">
-                  <div class="card-icon">
-                    <div class="card-img">
-                      <img src="assets/icons/a5.png" width="35" alt="Feature">
-                    </div>
-                  </div>
-                  <div class="card-text">
-                    <h3> AI Algorithms</h3>
-                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="feature-list">
-                  <div class="card-icon">
-                    <div class="card-img">
-                      <img src="assets/icons/a6.png" width="35" alt="Feature">
-                    </div>
-                  </div>
-                  <div class="card-text">
-                    <h3>Built-in Camera</h3>
-                    <p>Deliver the best stories and ideas on the topics you care about most straight to you.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Features Section -->
-        <div id="features" class="flex-split">
-           <div class="container-s">
-             <div class="flex-intro align-center wow fadeIn">
-               <h2>Build better landing pages</h2>
-               <p> When you get staright to the point the presentation looks attractive on your web pages.
-                   Keep it simple and clean always.</p>
-             </div>
-             <div class="flex-inner align-center">
-                 <div class="f-image wow">
-                   <img class="img-fluid" src="assets/images/feature.png" alt="Feature">
-                 </div>
-                 <div class="f-text">
-                   <div class="left-content">
-                     <h2>Dynamic charts.</h2>
-                     <p> When you get staright to the point the presentation looks attractive on your web pages.</p>
-                     <a href="#">Know more</a>
-                   </div>
-                 </div>
-             </div>
-
-             <div class="flex-inner flex-inverted align-center">
-               <div class="f-image f-image-inverted">
-                 <img class="img-fluid" src="assets/images/feature.png" alt="Feature">
-               </div>
-               <div class="f-text">
-                 <div class="left-content">
-                   <h2>Mobile Analytics.</h2>
-                   <p> When you get staright to the point the presentation looks attractive on your web pages.</p>
-                   <a href="#">Know more</a>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-
-
-         <!-- Counter Section -->
-         <div class="yd-stats wow fadeIn">
-           <div class="container-s">
-             <div class="row text-center">
-               <div class="col-sm-12">
-                 <div class="intro">
-                   <h2>Boost your revenue & cut work hours</h2>
-                   <p>Organized workflow and predictive patterns to boost your revenue.</p>
-                 </div>
-               </div>
-               <div class="col-sm-4">
-                 <div class="counter-up">
-                    <h3><span class="counter">47</span>%</h3>
-                   <div class="counter-text">
-                     <h2>Lesser backlogs</h2>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-sm-4">
-                 <div class="counter-up">
-                    <h3><span class="counter">33</span>%</h3>
-                   <div class="counter-text">
-                     <h2>Higher Profits</h2>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-sm-4">
-                 <div class="counter-up">
-                    <h3><span class="counter">33</span>%</h3>
-                   <div class="counter-text">
-                     <h2>Higher Profits</h2>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-md-12">
-                 <div class="yd-link">
-                   <a href="#">Know more about the template</a>
-                 </div>
-               </div>
-
-             </div>
-           </div>
-         </div><!-- Counter Section Ends -->
-
-        <div class="ar-ft-single wow fadeIn">
-          <div class="container-m">
-            <div class="ar-feature">
-              <div class="ar-list">
-                <ul>
-                  <li>
-                    <div class="ar-icon">
-                      <img src="assets/icons/f1.png" width="30" alt="Icon">
-                    </div>
-                    <div class="ar-text">
-                      <h3>Client Support</h3>
-                      <p>Team hangouts and instant text messaging right from the dashboard.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="ar-icon">
-                      <img src="assets/icons/f4.png" width="30" alt="Icon">
-                    </div>
-                    <div class="ar-text">
-                      <h3>Secure Servers</h3>
-                      <p>Team hangouts and instant text messaging right from the dashboard.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="ar-icon">
-                      <img src="assets/icons/f11.png" width="30" alt="Icon">
-                    </div>
-                    <div class="ar-text">
-                      <h3>Product Feedback</h3>
-                      <p>Team hangouts and instant text messaging right from the dashboard.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="ar-image">
-                <img class="ar-img img-fluid" src="assets/images/feature-2.png" alt="Hero Image">
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-         <div id="reviews" class="yd-reviews"><!-- Cubby Reviews -->
-           <div class="container">
-             <div class="row text-center">
-               <div class="col-sm-12 col-lg-8 offset-lg-2">
-                 <div class="intro wow fadeIn" data-wow-delay="0.1s">
-                   <h1>Customers say nice things</h1>
-                   <p>We have  very fair pricing policy that would benefit you and us at the same time.
-                      Get the free plan &amp; if you need more - pay.
-                   </p>
-                 </div>
-               </div>
-
-               <div class="col-sm-12 col-lg-8 offset-lg-2 text-center">
-                 <div class="review-cards owl-carousel owl-theme wow fadeInDown" data-wow-delay="0.2s">
-                   <div class="card-single">
-                     <div class="review-text">
-                       <h1>"We have very fair pricing policy that would benefit you and us at the same time.
-                         Choose what price you're willing to pay. Get the free plan & if you need more - pay."
-                       </h1>
-                     </div>
-                     <div class="review-attribution">
-                       <div class="review-img">
-                         <img class="img-fluid rounded-circle" src="assets/icons/review-1.png" alt="Review">
-                       </div>
-                       <i class="ion ion-star"></i>
-                      <i class="ion ion-star"></i>
-                      <i class="ion ion-star"></i>
-                      <i class="ion ion-star"></i>
-                      <i class="ion ion-ios-star-half"></i>
-                       <h2> Albert Rossi</h2>
-                       <h6>Stack Developer</h6>
-                       <a href="#">Dropboxes Inc</a>
-                     </div>
-                   </div>
-                   <div class="card-single">
-                     <div class="review-text">
-                       <h1>"We have very fair pricing policy that would benefit you and us at the same time.
-                         Choose what price you're willing to pay. Get the free plan & if you need more - pay."
-                       </h1>
-                     </div>
-                     <div class="review-attribution">
-                       <div class="review-img">
-                         <img class="img-fluid rounded-circle" src="assets/icons/review-2.png" alt="Review">
-                       </div>
-                       <i class="ion ion-star"></i>
-                      <i class="ion ion-star"></i>
-                      <i class="ion ion-star"></i>
-                      <i class="ion ion-star"></i>
-                      <i class="ion ion-ios-star-half"></i>
-                       <h2> Melissa Vanbergh</h2>
-                       <h6>Vice President</h6>
-                       <a href="#">Vestor Corp</a>
-                     </div>
-                   </div>
-                   <div class="card-single">
-                     <div class="review-text">
-                       <h1>"We have very fair pricing policy that would benefit you and us at the same time.
-                         Choose what price you're willing to pay. Get the free plan & if you need more - pay."
-                       </h1>
-                     </div>
-                     <div class="review-attribution">
-                       <div class="review-img">
-                         <img class="img-fluid rounded-circle" src="assets/icons/review-3.png" alt="Review">
-                       </div>
-                       <i class="ion ion-star"></i>
-                      <i class="ion ion-star"></i>
-                      <i class="ion ion-star"></i>
-                      <i class="ion ion-star"></i>
-                      <i class="ion ion-star"></i>
-                       <h2> Joshua Peterson</h2>
-                       <h6>Product Developer</h6>
-                       <a href="#">Betabet Inc</a>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-         <!-- cubby Reviews Ends -->
-
-
-        <!-- cubby Pricing Section -->
-        <div id="pricing" class="pricing-section text-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="pricing-intro wow fadeInDown">
-                  <h1>Pricing Plans.</h1>
-                  <p>
-                    Our plans are designed to meet the requirements of both beginners <br class="hidden-xs"> and players.
-                    Get the right plan that suits you.
-                  </p>
-                </div>
-                <div class="row">
-                  <div class="col-lg-4 offset-lg-2 col-md-6">
-                   <div class="table-left wow fadeInDown">
-                     <div class="pricing-details">
-                       <h2>Freemium</h2>
-                       <img src="assets/icons/free.png" width="60" alt="Icon">
-
-                       <span>$0.00</span>
-                          <ul>
-                           <li>First basic feature </li>
-                           <li>Second feature goes here</li>
-                           <li>Any other third feature</li>
-                           </ul>
-                         <button class="btn-action">Get Plan</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="table-right wow fadeInDown">
-                      <div class="pricing-details">
-                         <h2>Beginner</h2>
-                         <img src="assets/icons/paid.png" width="60" alt="Icon">
-                         <span>$24.99</span>
-                         <ul>
-                           <li>First premium feature </li>
-                           <li>Second premium one goes here</li>
-                           <li>Third premium feature here</li>
-                         </ul>
-                         <button class="btn-action">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- cubby Pricing Ends -->
-
-        <!-- CTA Signup Section -->
-        <div id="signup" class="cta-sm">
-          <div class="container-m text-center">
-            <div class="cta-content">
-               <h4>GRAB cubby FOR BEST PRICE TODAY</h4>
-               <h1>Start now and turn your online business into a profitable route.</h1>
-               <div class="form wow fadeIn" data-wow-delay="0.2s">
-                <form id="chimp-form" class="subscribe-form wow zoomIn" action="assets/php/subscribe.php" method="post" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
-                  <input class="mail" id="chimp-email" type="email" name="email" placeholder="Enter your email address" autocomplete="off">
-                  <input class="submit-button" type="submit" value="Sign up now">
-                </form>
-                <div id="response"></div>
-              </div>
-              <div class="form-note">
-                <p>14-day free trial and no credit card required.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- cubby Footer Section -->
-        <div class="footer-sm">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <a class="footer-logo" href="#">cubby</a>
-              </div>
-              <div class="col-md-4">
-                <h6>&copy; IOThemes 2018 Rights Reserved</h6>
-              </div>
-              <div class="col-md-4">
-                <ul>
-                  <li><a href="#">Facebook</a></li>
-                  <li><a href="#">Twitter</a></li>
-                  <li><a href="#">Linkedin</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-       <!-- Scroll To Top -->
-        <div id="back-top" class="bk-top">
-          <div class="bk-top-txt">
-             <a class="back-to-top js-scroll-trigger" href="#main">top</a>
-          </div>
-        </div>
-       <!-- Scroll To Top Ends-->
-
-      </div> <!-- Main -->
-    </div><!-- Wrapper -->
-
-
-    <!-- Jquery and Js Plugins -->
-    <script type="text/javascript" src="assets/js/jquery-2.1.1.js"></script>
-    <script type="text/javascript" src="assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins.js"></script>
-    <script type="text/javascript" src="assets/js/custom.js"></script>
-    <script type="text/javascript" src="assets/js/auto-complete.js"></script>
-  </body>
+</body>
 </html>
